@@ -16,6 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>try{var t=localStorage.getItem('theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.dataset.theme=t}catch(e){}</script>
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"EducationalOrganization","name":"الأستاذ زكريا | Professeur Zakaria","description":"Soutien scolaire et cours de renforcement en économie pour le baccalauréat au Maroc","areaServed":"MA"}
@@ -38,6 +39,7 @@
       <a href="#contact" data-ar="تواصل" data-fr="Contact">تواصل</a>
     </nav>
     <div class="nav-actions">
+      <button class="theme" id="themeBtn" type="button" aria-label="الوضع الداكن / Mode sombre"><span class="moon">☾</span><span class="sun">☀</span></button>
       <button class="lang" id="langBtn" type="button" aria-label="Langue / اللغة">FR</button>
       <button class="burger" id="burger" type="button" aria-label="menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
@@ -148,10 +150,10 @@
       <h2 data-ar="احجز حصتك أو اطلب معلومات" data-fr="Réservez ou demandez des informations">احجز حصتك أو اطلب معلومات</h2>
       <p data-ar="املأ النموذج وسأعود إليك بالتفاصيل: المواعيد، المسلك، وطريقة الحصص." data-fr="Remplissez le formulaire et je reviens vers vous avec les détails : horaires, filière et organisation des séances.">املأ النموذج وسأعود إليك بالتفاصيل: المواعيد، المسلك، وطريقة الحصص.</p>
       <div class="socials" id="socials">
-        <a data-s="youtube" href="#" target="_blank" rel="noopener" hidden>YouTube</a>
-        <a data-s="instagram" href="#" target="_blank" rel="noopener" hidden>Instagram</a>
-        <a data-s="tiktok" href="#" target="_blank" rel="noopener" hidden>TikTok</a>
-        <a data-s="facebook" href="#" target="_blank" rel="noopener" hidden>Facebook</a>
+        <a data-s="youtube" href="#" target="_blank" rel="noopener" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10 9.2v5.6l5-2.8z" fill="currentColor"/></svg><span>YouTube</span></a>
+        <a data-s="instagram" href="#" target="_blank" rel="noopener" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg><span>Instagram</span></a>
+        <a data-s="tiktok" href="#" target="_blank" rel="noopener" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11.2a3.7 3.7 0 1 1-3.7-3.7"/><path d="M14 3c.4 2.6 2 4.2 5 4.4"/></svg><span>TikTok</span></a>
+        <a data-s="facebook" href="#" target="_blank" rel="noopener" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 21v-8h2.7l.5-3.2h-3.2V7.9c0-.9.4-1.6 1.7-1.6h1.6V3.5c-.4-.1-1.4-.2-2.5-.2-2.5 0-4 1.5-4 4.2v2.3H8.3V13h3v8"/></svg><span>Facebook</span></a>
       </div>
       <a class="btn wa" id="waBtn" href="#" target="_blank" rel="noopener" hidden data-ar="تواصل عبر واتساب" data-fr="Écrire sur WhatsApp">تواصل عبر واتساب</a>
     </div>
@@ -177,6 +179,7 @@
       <p data-ar="معًا نحو التفوق | Ensemble vers la réussite" data-fr="معًا نحو التفوق | Ensemble vers la réussite">معًا نحو التفوق | Ensemble vers la réussite</p>
       <small data-ar="Soutien scolaire et cours de renforcement en économie" data-fr="Soutien scolaire et cours de renforcement en économie">Soutien scolaire et cours de renforcement en économie</small>
     </div>
+    <div class="foot-soc" id="footSoc"><a data-s="youtube" href="#" target="_blank" rel="noopener" aria-label="Youtube" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10 9.2v5.6l5-2.8z" fill="currentColor"/></svg></a><a data-s="instagram" href="#" target="_blank" rel="noopener" aria-label="Instagram" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg></a><a data-s="tiktok" href="#" target="_blank" rel="noopener" aria-label="Tiktok" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11.2a3.7 3.7 0 1 1-3.7-3.7"/><path d="M14 3c.4 2.6 2 4.2 5 4.4"/></svg></a><a data-s="facebook" href="#" target="_blank" rel="noopener" aria-label="Facebook" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 21v-8h2.7l.5-3.2h-3.2V7.9c0-.9.4-1.6 1.7-1.6h1.6V3.5c-.4-.1-1.4-.2-2.5-.2-2.5 0-4 1.5-4 4.2v2.3H8.3V13h3v8"/></svg></a></div>
     <small class="copy">© <span id="yr"></span> Professeur Zakaria</small>
   </div>
 </footer>

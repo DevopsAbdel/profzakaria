@@ -26,6 +26,17 @@
     applyLang();
   });
 
+  // theme
+  var meta = document.querySelector('meta[name=theme-color]');
+  function setTheme(m) {
+    html.dataset.theme = m;
+    try { localStorage.setItem('theme', m); } catch (e) {}
+    if (meta) meta.content = m === 'dark' ? '#071B2E' : '#0B2D4D';
+  }
+  document.getElementById('themeBtn').addEventListener('click', function () {
+    setTheme(html.dataset.theme === 'dark' ? 'light' : 'dark');
+  });
+
   // mobile menu
   var burger = document.getElementById('burger'), menu = document.getElementById('menu');
   burger.addEventListener('click', function () {
@@ -38,7 +49,7 @@
 
   // socials
   var S = C.social || {}, any = false;
-  document.querySelectorAll('#socials a').forEach(function (a) {
+  document.querySelectorAll('#socials a, #footSoc a').forEach(function (a) {
     var u = S[a.dataset.s];
     if (u) { a.href = u; a.hidden = false; any = true; }
   });
